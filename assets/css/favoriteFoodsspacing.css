@@ -1,0 +1,83 @@
+
+/* following two viewport lines are equivalent to meta viewport statement above, needed for Windows */
+/* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+@-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }  
+@viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+@-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }           
+@viewport { user-zoom: fixed ; min-zoom: 100% ; }
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.header {
+    padding:10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    margin: 0px;
+}
+.footer {
+    display: block;
+    padding:10px;
+    width: 100%;
+    bottom: 0;
+    margin: 0px;
+}
+ main {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+}
+.element1, .element2, .element3 {
+    flex: 1 1; 
+}
+.element1, .element3 {
+    min-height: 100vh;
+    min-width: 10vw;
+    max-width: 20vw;
+}
+.element2 {
+    min-height: 100vh;
+    min-width: calc(100vw-40vw);
+}
+nav ul {
+    list-style-type: none;
+    margin-top: 5rem;
+    padding: 0;
+    min-width: 20vw;
+    position: fixed;
+    height: 100%;
+}
+
+nav ul li {
+    margin: 1px;
+    display: flex;
+    flex-flow: column;
+}
+nav li a {
+    padding: 8px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.entreesArticle, .sidesArticle, .dessertsArticle {
+    padding-left: 40px;
+}
+
+img {
+    height: 150px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+h2 { 
+    padding:10px;
+    width: 200px;
+    margin-top: 5rem;
+}
+h3 {
+    margin: 40;
+}

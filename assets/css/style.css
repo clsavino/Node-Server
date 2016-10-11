@@ -1,0 +1,123 @@
+body {
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: #777777;
+	background: url("../images/light_grey.png") repeat;
+}
+
+.content-wrapper {
+	height: 100%;
+}
+
+
+.navbar {
+	color: #777777;
+	font-size: x-small;
+}
+
+a {
+	text-decoration: none;
+}
+
+ /* unvisited link */
+.navbar a:link {
+    color: #777777;
+    text-decoration: none;
+}
+
+/* visited link */
+.navbar a:visited {
+    color: #777777;
+    text-decoration: none;
+}
+
+/* mouse over link */
+.navbar a:hover {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #4aaaa5;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* selected link */
+.navbar a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header {
+	background-color: #ffffff;
+	border-style: none;
+	/*border-bottom: 1px #cccccc solid;*/
+}
+
+div.header-wrapper {
+	border-bottom: 1px #cccccc solid;
+}
+
+main, aside {
+	background-color: #ffffff;
+	border: 1px #dddddd solid;
+}
+
+aside {
+	text-align: center;
+}
+
+h1, h3 {
+	color: #4aaaa5;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h1 {
+	font-size: 25px;
+}
+
+h1#name {
+	border: 1px #cccccc solid;
+	color: #ffffff;
+	background-color: #4aaaa5;
+}
+
+p { 
+	font-size: 16px;
+}
+
+.bottomleft {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: teal;
+    text-align: center;
+ }
+
+input {
+	color: #000000; /* grey when not in focus*/
+}
+
+#username:focus {
+	color:#de2a00; /* green when input has focus - only affects this specific input */
+} 
+
+button {
+	background-color: #4aaaa5;
+	color: white;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+footer {
+	background-color: #666666;
+	border-top: 6px #4aaaa5 solid;
+	color: white;
+	text-align: center;
+}
+
+#footer-info {
+	font-size: 10px;
+	color: white;
+}
