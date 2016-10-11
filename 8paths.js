@@ -16,18 +16,24 @@ function handleRequest(req, res){
         case '/':
             displayRoot(urlParts.pathname, req, res);
             break;
-        case '/home':
+        case '/index':
             displayRoot(urlParts.pathname, req, res);
             break;
         case '/favoriteFood':
             displayFavoriteFood(urlParts.pathname, req, res);
             break;
-        case '/favoriteMoives':
+        case '/favoriteMovies':
             displayFavoriteMovies(urlParts.pathname, req, res);
             break;
         case '/favoriteCSS':
             displayFavoriteCSS(urlParts.pathname, req, res);
             break;
+        case '/portfolio':
+            displayPortfolio(urlParts.pathname, req, res);
+            break;
+        case '/contact':
+            displayContact(urlParts.pathname, req, res);
+            break;   
         default:
             display404(urlParts.pathname, req, res);
     }
@@ -48,7 +54,7 @@ function displayFavoriteFood (url, req, res) {
 };
 
 function displayFavoriteMovies (url, req, res) {
-    fs.readFile("favoriteMoives.html", function(err, data){
+    fs.readFile("favoriteMovies.html", function(err, data){
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.end(data);
     });
@@ -56,6 +62,29 @@ function displayFavoriteMovies (url, req, res) {
 
 function displayFavoriteCSS (url, req, res) {
     fs.readFile("favoriteCSS.html", function(err, data){
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.end(data);
+    });
+};
+
+// When we visit any path that is not specifically defined, this function is run.
+function display404(url, req, res) {
+  res.writeHead(404, {
+    'Content-Type': 'text/html'
+  });
+  res.write("<h1>404 Not Found </h1>");
+  res.end("The page you were looking for: " + url + " can not be found ");
+}
+
+function displayContact (url, req, res) {
+    fs.readFile("contact.html", function(err, data){
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.end(data);
+    });
+};
+
+function displayPortfolio (url, req, res) {
+    fs.readFile("portfolio.html", function(err, data){
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.end(data);
     });

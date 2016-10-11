@@ -33,7 +33,7 @@ function handleRequest(req, res) {
       sys.puts("display edit");
       break;
     default:
-      display_404(url_parts.pathname, req, res);
+      display404(url_parts.pathname, req, res);
   }
 }
 // Handle the request and send the response
@@ -60,7 +60,7 @@ function display_portfolio(url, req, res) {
 }
 
 // When we visit any path that is not specifically defined, this function is run.
-function display_404(url, req, res) {
+function display404(url, req, res) {
   res.writeHead(404, {
     'Content-Type': 'text/html'
   });

@@ -6,11 +6,6 @@ var PORT = 8080;
 
 var server = http.createServer(handleRequest);
 
-server.listen(PORT,function() {
-	//callback triggered when server is successfully listening
-	console.log('Listening on port: ',PORT);
-});
-
 //handle request and send response based on path
 function handleRequest (reg,res) {
 	//capture the url the request is made to
@@ -56,3 +51,8 @@ function display404 (url, req, res) {
     res.write('<h1>404 Not Found</h1>');
     res.end("The page you were looking for: " + url + " can not be found");
 };
+
+server.listen(PORT,function() {
+	//callback triggered when server is successfully listening
+	console.log('Listening on port: ',PORT);
+});

@@ -1,0 +1,138 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.main-content-outer {
+  width: 960px;
+  margin: 0 auto 30px auto;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+}
+
+h1#name {
+  float: left;
+  padding: 25px;
+  margin-left: 130px;
+}
+
+h3 {
+  padding: 10px;
+}
+
+ nav.navbar {
+  float: right;
+  text-align: center;
+  padding: 25px;
+  margin-right: 100px;
+ }
+
+ .navbar a {
+  padding: 10px;
+ }
+
+.main-content-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: center;
+}
+
+main {
+  float: left;
+  width: 650px;
+  margin: 20px 20px 0 0;
+  padding: 25px;
+}
+
+.bio img {
+  float:left;
+  /*margin: 0 10px 10px 0;*/
+  margin: 20px 20px 20px 0;
+}
+
+.bio p {
+  margin: 0 20px 0 0;
+  line-height: 1.5em;
+}
+
+main hr {
+  margin: 20px 0 10px 0;
+}
+
+.outer {
+  position: relative;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0em;
+  width: 190px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+div.placeholder {
+  display: inline-block;
+  float: left;
+  margin: 20px 20px 0 20px;
+}
+
+.placeholder img {
+  width: 220px;
+  margin: 0;
+}
+
+main a {
+  margin-bottom: 30px;
+}
+
+input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 590px;
+  padding: 5px;
+}
+
+textarea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 580px;
+  height: 100px;
+  padding: 10px;
+}
+
+button {
+  margin: 10px 0px 20px 0px;
+  padding: 10px 20px;
+}
+
+aside {
+  float: right;
+  width: 270px;
+  margin:  20px 0 20px 20px;
+  padding: 5px;
+}
+
+aside img  {
+  padding: 5px 0;
+  margin-bottom: 20px;
+}
+
+footer {
+  clear: both;
+  margin-bottom: 0;
+  padding: 25px;
+  height: 10px;
+}  

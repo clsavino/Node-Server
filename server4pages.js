@@ -16,13 +16,13 @@ function handleRequest(req, res){
         case '/':
             displayRoot(urlParts.pathname, req, res);
             break;
-        case '/home':
+        case '/index':
             displayRoot(urlParts.pathname, req, res);
             break;
         case '/favoriteFood':
             displayFavoriteFood(urlParts.pathname, req, res);
             break;
-        case '/favoriteMoives':
+        case '/favoriteMovies':
             displayFavoriteMovies(urlParts.pathname, req, res);
             break;
         case '/favoriteCSS':
@@ -61,7 +61,17 @@ function displayFavoriteCSS (url, req, res) {
     });
 };
 
+// display_404 is run When we visit any path that is not specifically defined
+function display404(url, req, res) {
+  res.writeHead(404, {
+    'Content-Type': 'text/html'
+  });
+  res.write("<h1>404 Not Found </h1>");
+  res.end("The page you were looking for: " + url + " can not be found ");
+}
+
 // Starts our server.
 server.listen(PORT, function(){
     console.log("Server is listening on PORT: " + PORT);
 });
+
