@@ -9,7 +9,6 @@ var PORT = 8080;
 var server = http.createServer(handleRequest);
 
 function handleRequest(req, res){
-
     var urlParts = url.parse(req.url);
     console.log(urlParts);
 
@@ -143,11 +142,6 @@ function displayCSImage (url,req,res) {
 }
 
 function displayBootstrapImage (url,req,res) {
-  // var pic = fs.readFileSync('assets/images/bootstrap.jpg', 'base64');
-  //    res.writeHead(200,{'Content-Type': 'image/PNG'});
-  // return res.end(pic);
-
-  // fs.readFile("assets/images/bootstrap.jpg",function(err,data) {
     fs.readFile("assets/images/bootstrap.jpg",function(err,data) {
     res.writeHead(200,{'Content-Type': 'image/jpeg'});
     res.end(data);
@@ -177,7 +171,7 @@ function display404(url, req, res) {
   res.end("The page you were looking for: " + url + " can not be found ");
 }
 
-// Starts our server.
+// Starts the server
 server.listen(PORT, function(){
     console.log("Server is listening on PORT: " + PORT);
 });
