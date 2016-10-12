@@ -22,12 +22,6 @@ function handleRequest(req, res){
             break;
         case '/favoriteFood.html':
             displayFavoriteFood(urlParts.pathname, req, res);
-            break;
-        case '/assets/css/favoriteFoodStyle.css':
-            displayFoodStyle(urlParts.pathname, req, res);
-            break;
-        case '/assets/css/favoriteFoodSpacing.css':
-            displayFoodSpacing(urlParts.pathname, req, res);
             break;   
         case '/favoriteMovies.html':
             displayFavoriteMovies(urlParts.pathname, req, res);
@@ -47,6 +41,12 @@ function handleRequest(req, res){
         case '/assets/css/spacing.css':
             displaySpacing(urlParts.pathname, req, res); 
             break;
+        case '/assets/css/favoriteFoodStyle.css':
+            displayFoodStyle(urlParts.pathname, req, res);
+            break;
+        case '/assets/css/favoriteFoodSpacing.css':
+            displayFoodSpacing(urlParts.pathname, req, res);
+            break;    
         case "/assets/images/ChristiSavinoImage.jpg":
             displayCSImage(urlParts.pathname,req,res);
             break;
@@ -136,29 +136,34 @@ function displaySpacing (url,req,res) {
 }
 
 function displayCSImage (url,req,res) {
-  fs.readFile("/assets/images/ChristiSavinoImage.jpg",function(err,data) {
+  fs.readFile("assets/images/ChristiSavinoImage.jpg",function(err,data) {
     res.writeHead(200,{'Content-Type': 'image/jpeg'});
     res.end(data);
   })
 }
 
 function displayBootstrapImage (url,req,res) {
-  fs.readFile("/assets/images/bootstrap.jpg",function(err,data) {
+  // var pic = fs.readFileSync('assets/images/bootstrap.jpg', 'base64');
+  //    res.writeHead(200,{'Content-Type': 'image/PNG'});
+  // return res.end(pic);
+
+  // fs.readFile("assets/images/bootstrap.jpg",function(err,data) {
+    fs.readFile("assets/images/bootstrap.jpg",function(err,data) {
     res.writeHead(200,{'Content-Type': 'image/jpeg'});
     res.end(data);
   })
 }
 
 function displayGithubImage (url,req,res) {
-  fs.readFile("/assets/images/squaregithub.png",function(err,data) {
+  fs.readFile("assets/images/squaregithub.png",function(err,data) {
     res.writeHead(200,{'Content-Type': 'image/PNG'});
     res.end(data);
   })
 }
 
 function displayLinkedinImage (url,req,res) {
-  fs.readFile("/assets/images/linkedin-square.png",function(err,data) {
-    res.writeHead(200,{'Content-Type': 'image/jpeg'});
+  fs.readFile("assets/images/linkedin-square.png",function(err,data) {
+    res.writeHead(200,{'Content-Type': 'image/PNG'});
     res.end(data);
   })
 }
