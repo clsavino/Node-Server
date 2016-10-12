@@ -6,7 +6,7 @@ Learning to set up web servers with Node.js without using Express. Various steps
 * Serving HTML to a path - portfolioServer.js
 * Process 6 requests and serve the pages along with their CSS and Image files - server6paths.js
 
-###### Screenshots for server6paths.js
+##### Screenshots for server6paths.js
 
 #####The web server - server6paths.js can serve HTML pages processing requests for 6 paths. The first two serve the index.html page on localhost:8080 depending on whether the route is '/' or '/index.html'. All 5 web pages have working links to all the other pages and responses operate flawlessly even responding with a 404 for any path not specified.
 
@@ -38,7 +38,7 @@ Learning to set up web servers with Node.js without using Express. Various steps
 * **fs**
 * **url**
 
-###### Getting Started
+##### Getting Started
 The Node.js apps are maintained in Github and can be run in the command line provided the html, css, and image files are downloaded to the local machine.
 
 ##### Some code examples
