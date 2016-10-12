@@ -4,6 +4,7 @@ Learning to set up web servers with Node.js without using Express. Various steps
 * One server - firstServer.js
 * Two servers - twoServers.js
 * Serving HTML to a path - portfolioServer.js
+* Post to Server - postMethod.js and Postmaster chrome extension
 * Process 6 requests and serve the pages along with their CSS and Image files - server6paths.js
 
 ##### Screenshots for server6paths.js
@@ -21,7 +22,7 @@ Learning to set up web servers with Node.js without using Express. Various steps
 ##### Screenshot 4 shows the Favorite CSS page
 ![Alt text](/assets/images/server4.PNG?raw=true )
 
-##### Screenshot 5 shows the Favorite Foods page with a sticky nav bar on the left with all the links to the other pages 
+##### Screenshot 5 shows the Favorite Foods page with a sticky nav bar on the left with all the links to the other pages
 
 ![Alt text](/assets/images/server5.PNG?raw=true )
 
@@ -29,11 +30,16 @@ Learning to set up web servers with Node.js without using Express. Various steps
 
 ![Alt text](/assets/images/server6.PNG?raw=true )
 
+##### Screenshot for postMethod.js which posts to server using Postman Chrome Extension
+
+![Alt text](/assets/images/postMethod.PNG?raw=true )
+![Alt text](/assets/images/post2.PNG?raw=true )
+
 ##### Technologies Used
 * **JavaScript**
 * **Node.js**
 
-##### The following npm modules were used 
+##### The following npm modules were used
 * **http**
 * **fs**
 * **url**
@@ -59,9 +65,9 @@ function handleRequest(req, res){
             break;
         case '/favoriteFood.html':
             displayFavoriteFood(urlParts.pathname, req, res);
-            break; 
+            break;
 
-// Starts the server             
+// Starts the server
 server.listen(PORT, function(){
     console.log("Server is listening on PORT: " + PORT);
 ```
